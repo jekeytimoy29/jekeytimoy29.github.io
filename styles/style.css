@@ -6,7 +6,10 @@
         }
 
         header {
-            background-image: url('../images/cebu.jpeg')
+            background-image: url('../images/cebu.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
         }
 
         section {
