@@ -1,34 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: gainsboro;
+}
 
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: gainsboro;
-        }
+header {
+  background-image: url("../images/cebu.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 73%;
+}
 
-        header {
-            background-image: url('../images/cebu.jpeg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
+h1 {
+  margin: 0px 15px 30px 30px;
+}
 
-        section {
-            margin: 20px;
-        }
+section {
+  margin: 20px;
+}
 
-        footer {
-            background-color: gray;
-            padding: 10px 5px;
-        }
+footer {
+  background-color: gray;
+  padding: 10px 25px;
+}
 
-        .avatar {
-            vertical-align: middle;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin: 15px;
-        }
+.avatar {
+  vertical-align: middle;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 55px 0px 20px 20px;
+}
 
-        .copyright {
-            font-weight: bold;
-        }
+.copyright {
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+}
+
+aside {
+  float: right;
+  margin: 15px 0px 15px 15px;
+  padding: 15px 0px 15px 15px;
+}
