@@ -6,20 +6,20 @@ body {
 header {
   background-image: url("../images/cebu.jpeg");
   background-repeat: no-repeat;
-  background-size: 100% 73%;
-}
-
-h1 {
-  margin: 0px 15px 30px 30px;
-}
-
-nav {
-  margin: 0px 40px 20px 40px;
+  background-size: 100% 83%;
 }
 
 footer {
   background-color: gray;
   padding: 10px 25px;
+}
+
+section {
+  margin: 0px 20px 20px 20px;
+}
+
+section > h1 {
+  margin-top: 0px;
 }
 
 .avatar {
