@@ -72,6 +72,10 @@ ul {
   object-fit: cover;
 }
 
+.moods span {
+  color: #efefe4;
+}
+
 .moods div.happy {
   float: left;
 }
