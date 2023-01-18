@@ -1,0 +1,84 @@
+body {
+  background-color: #696969;
+  margin: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  border-bottom: solid;
+  border-color: #000000;
+}
+
+h1,
+h2 {
+  color: #7c9ff7;
+}
+
+p {
+  color: #efefe4;
+  transform: scale(1, -1);
+}
+
+p::first-letter {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+p > em {
+  color: #eeee44;
+  font-style: normal;
+}
+
+ul {
+  color: #efefe4;
+}
+
+.favorite-movies ol {
+  color: #efefe4;
+  transform: rotate(180deg);
+  margin-inline-end: 40px;
+  margin-inline-start: 40px;
+}
+
+.favorite-movies ol > li {
+  transform: rotate(-180deg);
+}
+
+.favorite-movies ol a {
+  color: #b01f35;
+  text-decoration: none;
+}
+
+.favorite-movies ol a:hover {
+  text-decoration: underline;
+}
+
+.favorite-movies dl {
+  font-size: smaller;
+}
+
+.favorite-movies dt {
+  color: #eeee44;
+}
+
+div.right {
+  float: right;
+}
+
+.fun-facts-batchmates {
+  clear: right;
+}
+
+.moods img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+footer {
+  margin: 50px 0px 0px 0px;
+}
