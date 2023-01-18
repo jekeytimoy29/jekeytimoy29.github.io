@@ -59,24 +59,21 @@ ul {
 
 .favorite-movies dl {
   font-size: smaller;
+  padding-bottom: 20px;
 }
 
 .favorite-movies dt {
   color: #eeee44;
 }
 
-div.right {
-  float: right;
-}
-
-.fun-facts-batchmates {
-  clear: right;
-}
-
 .moods img {
   height: 200px;
   width: 200px;
   object-fit: cover;
+}
+
+.moods div.happy {
+  float: left;
 }
 
 footer {
