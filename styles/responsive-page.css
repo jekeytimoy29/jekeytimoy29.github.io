@@ -1,0 +1,117 @@
+#header {
+  grid-area: h;
+  background-color: #bef2f1;
+  text-align: center;
+  width: auto;
+  padding: 1%;
+}
+
+#header > h1 {
+  margin: 0%;
+}
+
+body {
+  margin: 0%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#footer {
+  grid-area: f;
+  width: auto;
+  text-align: center;
+  background-color: #354831;
+  color: #ffffff;
+  padding: 1%;
+}
+
+#nav {
+  grid-area: n;
+  width: auto;
+  background-color: #354831;
+  display: flex;
+  flex-direction: row;
+}
+
+#nav > a {
+  color: #ffffff;
+  text-decoration: none;
+  border-right: solid;
+  border-color: #000000;
+  padding: 1%;
+}
+
+#column-one {
+  padding-top: 0.5%;
+  padding-left: 1%;
+  background-color: #878787;
+  width: 25%;
+  padding-bottom: 37.5%;
+  margin: 0%;
+}
+
+#column-two {
+  padding-top: 0.5%;
+  padding-left: 1%;
+  background-color: #a5a5a5;
+  width: 50%;
+  padding-bottom: 37.5%;
+  margin: 0%;
+}
+
+#column-three {
+  padding-top: 0.5%;
+  padding-left: 1%;
+  background-color: #c3c3c3;
+  width: 25%;
+  padding-bottom: 37.5%;
+  margin: 0%;
+}
+
+#content {
+  grid-area: c;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+
+#container {
+  display: grid;
+  grid-template-areas:
+    "h h h h"
+    "h h h h"
+    "n n n n"
+    "c c c c"
+    "c c c c"
+    "c c c c"
+    "f f f f"
+    "f f f f";
+}
+
+@media screen and (max-width: 600px) {
+  #content {
+    flex-wrap: wrap;
+  }
+
+  #column-two {
+    order: 1;
+    flex: 1 0 100%;
+  }
+
+  #column-one,
+  #column-three {
+    flex: auto;
+  }
+
+  #container {
+    display: grid;
+    grid-template-areas:
+      "h h h h"
+      "n n n n"
+      "c c c c"
+      "c c c c"
+      "c c c c"
+      "c c c c"
+      "c c c c"
+      "f f f f";
+  }
+}
