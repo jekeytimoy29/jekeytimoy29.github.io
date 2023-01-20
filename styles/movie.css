@@ -4,22 +4,95 @@ body {
 }
 
 #header {
+  grid-area: h;
   background-image: url("../images/movie-review/bannerbg.png");
   display: grid;
   place-items: center;
+  width: auto;
+  height: 50px;
 }
 
 #nav {
+  grid-area: n;
   margin: 0.5%;
 }
 
 #content {
+  grid-area: c;
   display: grid;
   place-items: center;
 }
 
-#side-footer {
-  float: right;
+#content > h1 {
+  font-size: 24pt;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 3px 3px #999999;
+}
+
+#footer {
+  grid-area: f;
   display: flex;
   flex-direction: column;
+  padding-left: 90%;
+}
+
+#container {
+  display: grid;
+  grid-template-areas:
+    "h h h h"
+    "h h h h"
+    "n n n n"
+    "c c c c"
+    "c c c c"
+    "c c c c"
+    "f f f f"
+    "f f f f";
+}
+
+.review-container {
+  display: grid;
+  grid-template-areas:
+    "rh rh rh rs"
+    "rh rh rh rs"
+    "rc rc rc rs"
+    "rc rc rc rs"
+    "rc rc rc rs"
+    "rc rc rc rs"
+    "rc rc rc rs"
+    "rf rf rf rs";
+  width: 60%;
+  border: solid thick;
+  border-color: gray;
+  border-radius: 1%;
+}
+
+.review-header {
+  grid-area: rh;
+  background-image: url(../images/movie-review/rbg.png);
+  display: flex;
+}
+
+.review-header > p {
+  font-size: xx-large;
+  color: red;
+  font-weight: bolder;
+  margin-top: 0%;
+}
+
+.review-footer {
+  grid-area: rf;
+}
+
+.review-side {
+  grid-area: rs;
+}
+
+.review-content {
+  grid-area: rc;
+}
+
+.critics-container {
+  border: solid;
+  border-color: gray;
 }
