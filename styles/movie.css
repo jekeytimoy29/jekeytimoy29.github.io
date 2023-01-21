@@ -65,7 +65,7 @@ body {
     "rc rc rc rs"
     "rc rc rc rs"
     "rf rf rf rf";
-  width: 800px;
+  width: 60%;
   border: 4px solid gray;
   border-radius: 20px;
 }
@@ -132,8 +132,7 @@ body {
   grid-area: rc;
   display: flex;
   flex-wrap: wrap;
-  padding-left: 3%;
-  margin: 0%;
+  padding-left: 1%;
 }
 
 .review-content > div {
