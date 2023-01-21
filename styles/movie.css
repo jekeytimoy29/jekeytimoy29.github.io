@@ -29,11 +29,12 @@ body {
   text-shadow: 3px 3px #999999;
 }
 
-#footer {
-  grid-area: f;
-  padding-bottom: 90%;
+#side {
+  grid-area: s;
   display: flex;
   flex-direction: column;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 #container {
@@ -42,11 +43,11 @@ body {
     "h h h h"
     "h h h h"
     "n n n n"
-    "c c c f"
-    "c c c f"
-    "c c c f"
-    "c c c f"
-    "c c c f";
+    "c c c s"
+    "c c c s"
+    "c c c s"
+    "c c c s"
+    "c c c s";
 }
 
 .review-container {
