@@ -37,6 +37,10 @@ body {
   margin-bottom: 90%;
 }
 
+#side img {
+  opacity: 50%;
+}
+
 #container {
   display: grid;
   grid-template-areas:
@@ -100,14 +104,14 @@ body {
 
 .review-side img {
   border-top-right-radius: 16px;
-  margin-bottom: 0%;
+  vertical-align: bottom;
 }
 
 .review-side > dl {
   background-color: #a2b964;
   font-size: 8pt;
   padding: 10pt;
-  margin-top: 0%;
+  margin: 0%;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -142,18 +146,11 @@ body {
   border-radius: 10px;
   padding: 8px;
   background-color: #e8dc9b;
-}
-
-.critics-container p {
-  float: right;
+  flex: 1 0 47%;
 }
 
 .critics-name {
   margin-bottom: 20pt;
-}
-
-.critics-name img {
-  float: left;
 }
 
 .review-content div p {
@@ -163,4 +160,6 @@ body {
 
 .review-content div img {
   margin-right: 5px;
+  float: left;
+  vertical-align: top;
 }
