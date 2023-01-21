@@ -55,9 +55,14 @@ h2 span {
   margin-bottom: 2%;
 }
 
-#section-comments .comments-reviews {
+.comments-reviews {
   margin-left: 5%;
   background-color: #ffffa8;
+}
+
+.comments-reviews q,
+p {
+  font-style: italic;
 }
 
 #section-footer > pre {
