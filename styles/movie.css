@@ -132,12 +132,12 @@ body {
   grid-area: rc;
   display: flex;
   flex-wrap: wrap;
-  padding-left: 1%;
+  padding: 0 1%;
 }
 
 .review-content > div {
-  flex: 1 1 44%;
-  margin: 0% 3%;
+  flex: 0 1 46%;
+  margin: 0% 2%;
 }
 
 .critics-container {
