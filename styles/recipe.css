@@ -3,6 +3,7 @@ body {
   background-color: #ffffff;
   font-size: 11pt;
   font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 2%;
 }
 
 a {
@@ -15,11 +16,8 @@ article {
   border-color: #000000;
 }
 
-nav a,
-#section-footer > p > a {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 16px;
-  color: #00f;
+header > div {
+  margin: 1% 0%;
 }
 
 h1 {
@@ -38,7 +36,11 @@ h2 {
   font-size: 18pt;
 }
 
-ol em {
-  font-weight: bold;
-  font-style: normal;
+#section-directions p span {
+  text-decoration: line-through;
+}
+
+#section-footer > ul {
+  list-style-type: none;
+  padding-left: 0%;
 }
