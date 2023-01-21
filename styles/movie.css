@@ -30,11 +30,11 @@ body {
 }
 
 #side {
-  grid-area: s;
   display: flex;
   flex-direction: column;
-  margin-top: auto;
-  margin-bottom: 90%;
+  position: fixed;
+  left: 94%;
+  bottom: 0%;
 }
 
 #side img {
@@ -47,11 +47,11 @@ body {
     "h h h h"
     "h h h h"
     "n n n n"
-    "c c c s"
-    "c c c s"
-    "c c c s"
-    "c c c s"
-    "c c c s";
+    "c c c c"
+    "c c c c"
+    "c c c c"
+    "c c c c"
+    "c c c c";
 }
 
 .review-container {
@@ -65,7 +65,7 @@ body {
     "rc rc rc rs"
     "rc rc rc rs"
     "rf rf rf rf";
-  width: 75%;
+  width: 800px;
   border: 4px solid gray;
   border-radius: 20px;
 }
