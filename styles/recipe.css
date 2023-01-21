@@ -1,6 +1,7 @@
 body {
   color: #404040;
   background-color: #ffffff;
+  background-image: url("../images/recipe/silverware.jpg");
   font-size: 11pt;
   font-family: Georgia, "Times New Roman", Times, serif;
   margin: 2%;
@@ -26,6 +27,10 @@ h1 {
   text-align: center;
 }
 
+.pie-bullet-list {
+  list-style: url("../images/recipe/pie_bullet.png");
+}
+
 h1,
 h2 {
   color: #a4a400;
@@ -40,7 +45,17 @@ h2 {
   text-decoration: line-through;
 }
 
-#section-footer > ul {
+#section-comments > ul {
   list-style-type: none;
   padding-left: 0%;
+  margin-bottom: 2%;
+}
+
+#section-comments .comments-reviews {
+  margin-left: 5%;
+  background-color: #ffffa8;
+}
+
+#section-footer > pre {
+  margin-bottom: 2%;
 }
