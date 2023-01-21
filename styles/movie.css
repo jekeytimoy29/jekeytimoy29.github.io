@@ -34,7 +34,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: auto;
-  margin-bottom: auto;
+  margin-bottom: 90%;
 }
 
 #container {
@@ -74,12 +74,11 @@ body {
   font-size: 48pt;
   color: red;
   font-weight: bold;
-  border-top-left-radius: inherit;
+  border-top-left-radius: 18px;
 }
 
 .review-header img {
-  border-top-left-radius: inherit;
-  margin: 0%;
+  border-top-left-radius: 16px;
 }
 
 .review-footer {
@@ -89,18 +88,18 @@ body {
   text-align: center;
   font-size: 8pt;
   font-family: Arial, Helvetica, sans-serif;
-  border-bottom-left-radius: inherit;
-  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
 }
 
 .review-side {
   grid-area: rs;
   width: 250px;
-  border-top-right-radius: inherit;
+  border-top-right-radius: 18px;
 }
 
 .review-side img {
-  border-top-right-radius: inherit;
+  border-top-right-radius: 16px;
   margin-bottom: 0%;
 }
 
