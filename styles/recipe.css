@@ -22,9 +22,12 @@ header > div {
 }
 
 h1 {
+  text-align: center;
+}
+
+h1 span {
   font-size: 22pt;
   font-weight: bold;
-  text-align: center;
 }
 
 .pie-bullet-list {
@@ -32,13 +35,14 @@ h1 {
 }
 
 h1,
-h2 {
+h2 span {
   color: #a4a400;
   background-color: #f0f0f0;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-decoration: underline;
   font-size: 18pt;
+  letter-spacing: 0.26em;
 }
 
 #section-directions p span {
