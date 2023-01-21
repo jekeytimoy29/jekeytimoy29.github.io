@@ -125,6 +125,7 @@ body {
 
 .review-side ul {
   list-style-type: none;
+  padding-left: 0%;
 }
 
 .review-content {
