@@ -28,7 +28,6 @@ function startAnimation() {
   startButton.disabled = true;
   stopButton.disabled = false;
   animationSelected.disabled = true;
-  textAreaField.disabled = true;
 
   savedCurrentTextArea = textAreaField.value;
 
@@ -44,7 +43,6 @@ function stopAnimation() {
   startButton.disabled = false;
   stopButton.disabled = true;
   animationSelected.disabled = false;
-  textAreaField.disabled = false;
   counter = 0;
 }
 
