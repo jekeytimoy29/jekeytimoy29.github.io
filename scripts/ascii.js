@@ -113,7 +113,7 @@ function initiateAnimation() {
     textAreaField.value = textBoxForAnimate[counter];
     counter++;
 
-    if (counter === textBoxForAnimate.length - 1) counter = 0;
+    if (counter === textBoxForAnimate.length) counter = 0;
   }
 }
 
