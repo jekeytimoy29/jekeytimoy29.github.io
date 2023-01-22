@@ -1,4 +1,4 @@
-const TURBO = 5000;
+const TURBO = 50;
 const NON_TURBO = 250;
 
 window.onload = function () {
@@ -13,7 +13,7 @@ window.onload = function () {
   timeInterval = NON_TURBO;
   timer = null;
   counter = 0;
-  textBoxForAnimate = "";
+  textBoxForAnimate = [];
 
   stopButton.onclick = stopAnimation;
   startButton.onclick = startAnimation;
@@ -45,6 +45,7 @@ function stopAnimation() {
   stopButton.disabled = true;
   animationSelected.disabled = false;
   textAreaField.disabled = false;
+  counter = 0;
 }
 
 function setAnimation() {
@@ -66,8 +67,11 @@ function setAnimation() {
       animText = ANIMATIONS["Dive"];
       break;
   }
-  textBoxForAnimate = animText.split("=====\n");
-  textAreaField.value = textBoxForAnimate[0];
+
+  if (animText !== "") {
+    textBoxForAnimate = animText.split("=====\n");
+    textAreaField.value = textBoxForAnimate[0];
+  }
 }
 
 function setFontSize() {
@@ -105,10 +109,12 @@ function setIsTurbo() {
 }
 
 function initiateAnimation() {
-  textAreaField.value = textBoxForAnimate[counter];
-  counter++;
+  if (textBoxForAnimate.length > 0) {
+    textAreaField.value = textBoxForAnimate[counter];
+    counter++;
 
-  if (counter === textBoxForAnimate.length - 1) counter = 0;
+    if (counter === textBoxForAnimate.length - 1) counter = 0;
+  }
 }
 
 function clearTimer() {
