@@ -1,4 +1,4 @@
-const TURBO = 50;
+const TURBO = 5000;
 const NON_TURBO = 250;
 
 window.onload = function () {
@@ -12,6 +12,8 @@ window.onload = function () {
 
   timeInterval = NON_TURBO;
   timer = null;
+  counter = 0;
+  textBoxForAnimate = "";
 
   stopButton.onclick = stopAnimation;
   startButton.onclick = startAnimation;
@@ -25,6 +27,8 @@ function startAnimation() {
 
   startButton.disabled = true;
   stopButton.disabled = false;
+  animationSelected.disabled = true;
+  textAreaField.disabled = true;
 
   savedCurrentTextArea = textAreaField.value;
 
@@ -39,26 +43,31 @@ function stopAnimation() {
 
   startButton.disabled = false;
   stopButton.disabled = true;
+  animationSelected.disabled = false;
+  textAreaField.disabled = false;
 }
 
 function setAnimation() {
+  let animText;
   switch (animationSelected.selectedIndex) {
     case 0:
-      textAreaField.value = ANIMATIONS["Blank"];
+      animText = ANIMATIONS["Blank"];
       break;
     case 1:
-      textAreaField.value = ANIMATIONS["Exercise"];
+      animText = ANIMATIONS["Exercise"];
       break;
     case 2:
-      textAreaField.value = ANIMATIONS["Juggler"];
+      animText = ANIMATIONS["Juggler"];
       break;
     case 3:
-      textAreaField.value = ANIMATIONS["Bike"];
+      animText = ANIMATIONS["Bike"];
       break;
     case 4:
-      textAreaField.value = ANIMATIONS["Dive"];
+      animText = ANIMATIONS["Dive"];
       break;
   }
+  textBoxForAnimate = animText.split("=====\n");
+  textAreaField.value = textBoxForAnimate[0];
 }
 
 function setFontSize() {
@@ -96,7 +105,10 @@ function setIsTurbo() {
 }
 
 function initiateAnimation() {
-  console.log("initiate animation..." + timeInterval);
+  textAreaField.value = textBoxForAnimate[counter];
+  counter++;
+
+  if (counter === textBoxForAnimate.length - 1) counter = 0;
 }
 
 function clearTimer() {
