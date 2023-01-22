@@ -1,21 +1,42 @@
 body {
-  margin: 0px;
+  margin: 0%;
   background-color: gainsboro;
 }
 
 header {
+  grid-area: h;
   background-image: url("../images/cebu.jpeg");
   background-repeat: no-repeat;
   background-size: 100% 83%;
 }
 
 footer {
+  grid-area: f;
   background-color: gray;
   padding: 10px 25px;
+  color: #d0e0e3;
+  align-items: stretch;
+  height: 174px;
+  width: auto;
 }
 
 section {
+  grid-area: s;
   margin: 0px 20px 20px 20px;
+  height: auto;
+}
+
+#container {
+  display: grid;
+  grid-template-areas:
+    "h h h h"
+    "h h h h"
+    "s s s s"
+    "s s s s"
+    "s s s s"
+    "s s s s"
+    "f f f f"
+    "f f f f";
 }
 
 section > h1 {
@@ -32,14 +53,21 @@ section > h1 {
 
 .copyright {
   font-weight: bold;
+  text-align: left;
 }
 
 ul {
   list-style: none;
 }
 
-aside {
-  float: right;
-  margin: 15px 0px 15px 15px;
-  padding: 15px 0px 15px 15px;
+ul > li {
+  margin: 0.5%;
+}
+
+.validators {
+  position: fixed;
+  opacity: 60%;
+  position: fixed;
+  left: 85%;
+  bottom: 7%;
 }
