@@ -1,4 +1,4 @@
-const TURBO = 500;
+const TURBO = 50;
 const NON_TURBO = 250;
 
 window.onload = function () {
@@ -10,6 +10,9 @@ window.onload = function () {
   isTurbo = document.getElementById("turbo");
   textAreaField = document.getElementById("text-area");
 
+  timeInterval = NON_TURBO;
+  timer = null;
+
   stopButton.onclick = stopAnimation;
   startButton.onclick = startAnimation;
   animationSelected.onchange = setAnimation;
@@ -20,14 +23,18 @@ window.onload = function () {
 function startAnimation() {
   console.log("start animation...");
 
-  savedCurrentTextArea = textAreaField.value;
-
   startButton.disabled = true;
   stopButton.disabled = false;
+
+  savedCurrentTextArea = textAreaField.value;
+
+  timer = setInterval(initiateAnimation, timeInterval);
 }
 
 function stopAnimation() {
   console.log("stop animation...");
+  clearTimer();
+
   textAreaField.value = savedCurrentTextArea;
 
   startButton.disabled = false;
@@ -78,4 +85,21 @@ function setFontSize() {
   }
 }
 
-function setIsTurbo() {}
+function setIsTurbo() {
+  if (isTurbo.checked) timeInterval = TURBO;
+  else timeInterval = NON_TURBO;
+
+  if (null !== timer) {
+    clearTimer();
+    timer = setInterval(initiateAnimation, timeInterval);
+  }
+}
+
+function initiateAnimation() {
+  console.log("initiate animation..." + timeInterval);
+}
+
+function clearTimer() {
+  clearInterval(timer);
+  timer = null;
+}
