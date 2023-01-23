@@ -64,3 +64,9 @@ select {
 #validate div.js-check {
   box-shadow: 3px 3px 6px #999999;
 }
+#nav {
+  text-align: left;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 1%;
+}
