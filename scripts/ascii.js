@@ -1,28 +1,40 @@
 const TURBO = 50;
 const NON_TURBO = 250;
 
+var timeInterval = NON_TURBO;
+var timer = null;
+var counter = 0;
+var textBoxForAnimate = [];
+var savedCurrentTextArea = "";
+
 window.onload = function () {
+  "use strict";
   console.log("window onload...");
-  startButton = document.getElementById("start");
-  stopButton = document.getElementById("stop");
-  animationSelected = document.getElementById("animation");
-  fontsizeSelected = document.getElementById("fontsize");
-  isTurbo = document.getElementById("turbo");
-  textAreaField = document.getElementById("text-area");
+  var startButton = document.getElementById("start");
+  var stopButton = document.getElementById("stop");
+  var animationSelected = document.getElementById("animation");
+  var fontsizeSelected = document.getElementById("fontsize");
+  var isTurbo = document.getElementById("turbo");
+  var textAreaField = document.getElementById("text-area");
 
-  timeInterval = NON_TURBO;
-  timer = null;
-  counter = 0;
-  textBoxForAnimate = [];
-
-  stopButton.onclick = stopAnimation;
-  startButton.onclick = startAnimation;
-  animationSelected.onchange = setAnimation;
-  fontsizeSelected.onchange = setFontSize;
-  isTurbo.onclick = setIsTurbo;
+  stopButton.onclick = () =>
+    stopAnimation(startButton, stopButton, textAreaField, animationSelected);
+  startButton.onclick = () =>
+    startAnimation(startButton, stopButton, textAreaField, animationSelected);
+  animationSelected.onchange = () =>
+    setAnimation(animationSelected, textAreaField);
+  fontsizeSelected.onchange = () =>
+    setFontSize(fontsizeSelected, textAreaField);
+  isTurbo.onclick = () => setIsTurbo(isTurbo, textAreaField);
 };
 
-function startAnimation() {
+function startAnimation(
+  startButton,
+  stopButton,
+  textAreaField,
+  animationSelected
+) {
+  "use strict";
   console.log("start animation...");
 
   startButton.disabled = true;
@@ -31,10 +43,16 @@ function startAnimation() {
 
   savedCurrentTextArea = textAreaField.value;
 
-  timer = setInterval(initiateAnimation, timeInterval);
+  timer = setInterval(() => initiateAnimation(textAreaField), timeInterval);
 }
 
-function stopAnimation() {
+function stopAnimation(
+  startButton,
+  stopButton,
+  textAreaField,
+  animationSelected
+) {
+  "use strict";
   console.log("stop animation...");
   clearTimer();
 
@@ -46,33 +64,38 @@ function stopAnimation() {
   counter = 0;
 }
 
-function setAnimation() {
+function setAnimation(animationSelected, textAreaField) {
+  "use strict";
   let animText;
   switch (animationSelected.selectedIndex) {
     case 0:
-      animText = ANIMATIONS["Blank"];
+      animText = BLANK;
       break;
     case 1:
-      animText = ANIMATIONS["Exercise"];
+      animText = EXERCISE;
       break;
     case 2:
-      animText = ANIMATIONS["Juggler"];
+      animText = JUGGLER;
       break;
     case 3:
-      animText = ANIMATIONS["Bike"];
+      animText = BIKE;
       break;
     case 4:
-      animText = ANIMATIONS["Dive"];
+      animText = DIVE;
       break;
   }
 
   if (animText !== "") {
     textBoxForAnimate = animText.split("=====\n");
     textAreaField.value = textBoxForAnimate[0];
+  } else {
+    textAreaField.value = "";
+    textBoxForAnimate = [];
   }
 }
 
-function setFontSize() {
+function setFontSize(fontsizeSelected, textAreaField) {
+  "use strict";
   switch (fontsizeSelected.selectedIndex) {
     case 0:
       console.log(fontsizeSelected.value);
@@ -96,17 +119,19 @@ function setFontSize() {
   }
 }
 
-function setIsTurbo() {
+function setIsTurbo(isTurbo, textAreaField) {
+  "use strict";
   if (isTurbo.checked) timeInterval = TURBO;
   else timeInterval = NON_TURBO;
 
   if (null !== timer) {
     clearTimer();
-    timer = setInterval(initiateAnimation, timeInterval);
+    timer = setInterval(() => initiateAnimation(textAreaField), timeInterval);
   }
 }
 
-function initiateAnimation() {
+function initiateAnimation(textAreaField) {
+  "use strict";
   if (textBoxForAnimate.length > 0) {
     textAreaField.value = textBoxForAnimate[counter];
     counter++;
@@ -116,6 +141,7 @@ function initiateAnimation() {
 }
 
 function clearTimer() {
+  "use strict";
   clearInterval(timer);
   timer = null;
 }
