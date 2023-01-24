@@ -1,3 +1,7 @@
+/*global
+BLANK, EXERCISE, JUGGLER, BIKE, DIVE
+*/
+
 const TURBO = 50;
 const NON_TURBO = 250;
 
