@@ -18,3 +18,18 @@ form {
 .form-actions {
   text-align: right;
 }
+
+.my-btn-outline-secondary {
+  border-color: #808080;
+  margin: 1%;
+}
+
+.my-btn-outline-danger {
+  border-color: #dc143c;
+  margin: 1%;
+}
+
+.my-btn-outline-info {
+  border-color: #7abbff;
+  margin: 1%;
+}
