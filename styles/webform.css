@@ -4,5 +4,17 @@ form {
 
 .my-navbar {
   background-color: #7abbff;
+  padding-right: 1%;
+}
+
+.navbar-links {
   color: #eff9f9;
+}
+
+.form-columns {
+  margin: 3%;
+}
+
+.form-actions {
+  text-align: right;
 }
