@@ -1,4 +1,4 @@
-var FieldEmployee = (function () {
+const FieldEmployee = (function () {
   "use strict";
 
   //private vars

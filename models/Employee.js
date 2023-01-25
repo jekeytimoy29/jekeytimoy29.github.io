@@ -1,4 +1,4 @@
-var Employee = (function () {
+const Employee = (function () {
   "use strict";
 
   // private members
