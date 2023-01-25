@@ -1,4 +1,6 @@
 var FieldEmployee = (() => {
+  "use strict";
+
   //private vars
   var address;
 

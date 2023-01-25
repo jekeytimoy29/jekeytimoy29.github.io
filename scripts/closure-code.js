@@ -1,4 +1,5 @@
 function incrementAndResetNumber() {
+  "use strict";
   var counter = 0;
 
   return {
@@ -13,6 +14,7 @@ function incrementAndResetNumber() {
 }
 
 function addWithNumber(x) {
+  "use strict";
   var counter = 0;
 
   return {

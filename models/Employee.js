@@ -1,4 +1,6 @@
 var Employee = (() => {
+  "use strict";
+
   // private members
   var name;
   var age;

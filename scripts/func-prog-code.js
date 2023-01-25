@@ -1,5 +1,6 @@
 /*returns the sum of all the numbers in an array of numbers*/
 function sum(nums) {
+  "use strict";
   if (Array.isArray(nums)) return nums.reduce((a, b) => a + b);
   else {
     if (isNaN(nums)) {
@@ -13,6 +14,7 @@ function sum(nums) {
 
 /*returns the product of all the numbers in an array of numbers*/
 function multiply(nums) {
+  "use strict";
   if (Array.isArray(nums)) return nums.reduce((a, b) => a * b);
   else {
     if (isNaN(nums)) {
@@ -26,6 +28,7 @@ function multiply(nums) {
 
 /*returns the reversal of a string or integer*/
 function reverse(word) {
+  "use strict";
   if (word === null || word === undefined) return word;
 
   if (isNaN(word)) return [...word].reverse().join("");
@@ -40,6 +43,7 @@ function reverse(word) {
 
 /*returns the array of words that are longer than largest. */
 function filterLongWords(largest, words) {
+  "use strict";
   if (!Array.isArray(words) || isNaN(largest)) return null;
   return words.filter((w) => w != null && w != undefined && w.length > largest);
 }
