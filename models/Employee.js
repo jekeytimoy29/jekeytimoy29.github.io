@@ -1,4 +1,4 @@
-var Employee = (() => {
+var Employee = (function () {
   "use strict";
 
   // private members

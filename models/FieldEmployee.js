@@ -1,4 +1,4 @@
-var FieldEmployee = (() => {
+var FieldEmployee = (function () {
   "use strict";
 
   //private vars
