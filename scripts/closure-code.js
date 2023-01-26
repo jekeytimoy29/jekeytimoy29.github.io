@@ -1,6 +1,7 @@
+// eslint-disable-next-line no-unused-vars
 function incrementAndResetNumber() {
   "use strict";
-  var counter = 0;
+  let counter = 0;
 
   return {
     add: () => {
@@ -13,9 +14,10 @@ function incrementAndResetNumber() {
   };
 }
 
+// eslint-disable-next-line no-unused-vars
 function addWithNumber(x) {
   "use strict";
-  var counter = 0;
+  let counter = 0;
 
   return {
     add: () => {

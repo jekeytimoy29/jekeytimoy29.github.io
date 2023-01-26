@@ -1,10 +1,11 @@
+// eslint-disable-next-line no-unused-vars
 const Employee = (function () {
   "use strict";
 
   // private members
-  var name;
-  var age;
-  var salary;
+  let name;
+  let age;
+  let salary;
 
   // getter functions
   function getName() {
@@ -38,13 +39,13 @@ const Employee = (function () {
   }
 
   return {
-    setName: setName,
-    setAge: setAge,
-    setSalary: setSalary,
-    getName: getName,
-    getAge: getAge,
-    getSalary: getSalary,
-    increaseSalary: increaseSalary,
-    incrementAge: incrementAge,
+    setName,
+    setAge,
+    setSalary,
+    getName,
+    getAge,
+    getSalary,
+    increaseSalary,
+    incrementAge,
   };
 })();

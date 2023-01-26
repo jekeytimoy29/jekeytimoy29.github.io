@@ -1,6 +1,9 @@
+/* global
+  Employee, FieldEmployee, incrementAndResetNumber, addWithNumber
+*/
 describe("Function closure incrementAndResetNumber() tests", function () {
   it("Tests the incrementAndResetNumber which returns an object that it can increment and reset a number.", function () {
-    let count = incrementAndResetNumber();
+    const count = incrementAndResetNumber();
     assert.equal(count.add(), 1);
     assert.equal(count.add(), 2);
     assert.equal(count.add(), 3);
@@ -32,7 +35,7 @@ describe("Function closure addWithNumber() tests", function () {
 
 describe("Module Employee Unit Tests", function () {
   it("Tests all the functionalities of the module Employee", function () {
-    let employee = Employee;
+    const employee = Employee;
     employee.setAge(39);
     employee.setName("Jake");
     employee.setSalary(3000.0);
@@ -51,7 +54,7 @@ describe("Module Employee Unit Tests", function () {
 
 describe("Module FieldEmployee Unit Tests", function () {
   it("Tests all the functionalities of the module FieldEmployee", function () {
-    let fieldEmployee = FieldEmployee;
+    const fieldEmployee = FieldEmployee;
     fieldEmployee.setAge(39);
     fieldEmployee.setName("Jake");
     fieldEmployee.setSalary(3000.0);

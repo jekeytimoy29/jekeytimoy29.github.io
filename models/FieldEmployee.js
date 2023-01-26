@@ -1,22 +1,27 @@
+/* global
+  Employee
+*/
+
+// eslint-disable-next-line no-unused-vars
 const FieldEmployee = (function () {
   "use strict";
 
-  //private vars
-  var address;
+  // private vars
+  let address;
 
-  //getter methods
+  // getter methods
   function getAddress() {
     return address;
   }
 
-  //setter methods
+  // setter methods
   function setAddress(addr) {
     address = addr;
   }
 
   return {
     ...Employee,
-    getAddress: getAddress,
-    setAddress: setAddress,
+    getAddress,
+    setAddress,
   };
 })();

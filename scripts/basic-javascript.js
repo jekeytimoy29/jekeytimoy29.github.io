@@ -63,7 +63,7 @@ console.log(
     myFunctionTest(0, maxOfThree(1, "A", 0))
 );
 
-/*returns true if it is a vowel, false otherwise*/
+/* returns true if it is a vowel, false otherwise */
 function isVowel(c) {
   const vowels = ["a", "e", "i", "o", "u"];
   return vowels.includes(c);
@@ -100,7 +100,7 @@ console.log(
     myFunctionTest(false, isVowel(" "))
 );
 
-/*returns the sum of all the numbers in an array of numbers*/
+/* returns the sum of all the numbers in an array of numbers */
 function sum(nums) {
   let sum = 0;
   for (let i = 0; i < nums.length; i++) {
@@ -127,7 +127,7 @@ console.log(
     myFunctionTest("3Snake34", sum([1, 2, "Snake", 3, 4]))
 );
 
-/*returns the product of all the numbers in an array of numbers*/
+/* returns the product of all the numbers in an array of numbers */
 function multiply(nums) {
   let prod = 1;
   for (let i = 0; i < nums.length; i++) {
@@ -152,11 +152,11 @@ console.log(
     myFunctionTest(NaN, multiply("1234Snake"))
 );
 
-/*returns the reversal of a string*/
+/* returns the reversal of a string */
 function reverse(word) {
-  if (word == null || word == undefined || word == NaN) return word;
+  if (word == null || word === undefined) return word;
 
-  let w = word.toString();
+  const w = word.toString();
   let lastIndex = w.length - 1;
   let result = "";
 
@@ -195,15 +195,15 @@ console.log(
   "Expected output of reverse(' ') is ' ' " + myFunctionTest(" ", reverse(" "))
 );
 
-/*returns the length of the longest one in an array of words */
+/* returns the length of the longest one in an array of words */
 function findLongestWord(words) {
   if (!Array.isArray(words)) return null;
 
-  let wordsFiltered = words.filter((w) => w != null && w != undefined);
+  const wordsFiltered = words.filter((w) => w != null && w !== undefined);
 
-  if (wordsFiltered.length == 0) return null;
+  if (wordsFiltered.length === 0) return null;
 
-  let wordsSorted = wordsFiltered.sort((a, b) => a.length - b.length);
+  const wordsSorted = wordsFiltered.sort((a, b) => a.length - b.length);
   return wordsSorted[wordsSorted.length - 1].toString();
 }
 
@@ -237,17 +237,20 @@ console.log(
 );
 console.log(
   "Expected output of findLongestWord([1,2,3,4,'Snakey', 'Snake']) is 'Snakey' " +
-    myFunctionTest("Snakey", findLongestWord([1, 2, 3, 4, , "Snakey", "Snake"]))
+    myFunctionTest("Snakey", findLongestWord([1, 2, 3, 4, "Snakey", "Snake"]))
 );
 
-/*returns the array of words that are longer than largest. */
+/* returns the array of words that are longer than largest. */
 function filterLongWords(largest, words) {
   if (!Array.isArray(words) || isNaN(largest)) return null;
-  return words.filter((w) => w != null && w != undefined && w.length > largest);
+  return words.filter(
+    (w) => w != null && w !== undefined && w.length > largest
+  );
 }
 
-/*returns if Array values are equal or not */
+/* returns if Array values are equal or not */
 function areArrayValuesEqual(arr1, arr2) {
+  // eslint-disable-next-line eqeqeq
   if (arr1.length != arr2.length) return false;
   for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) return false;
@@ -298,8 +301,8 @@ document.writeln(c.toString() + "<br/>");
 const d = a.reduce((a, b) => a * b);
 document.writeln(d + "<br/>");
 
-const d2 = a.find((e) => e > 1); //3
+const d2 = a.find((e) => e > 1);
 
-const d3 = a.findIndex((e) => e > 1); //1
+const d3 = a.findIndex((e) => e > 1);
 document.writeln(d2 + "<br/>");
 document.writeln(d3);

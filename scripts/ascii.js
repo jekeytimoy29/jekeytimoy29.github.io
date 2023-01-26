@@ -1,25 +1,25 @@
-/*global
+/* global
 BLANK, EXERCISE, JUGGLER, BIKE, DIVE
 */
 
 const TURBO = 50;
 const NON_TURBO = 250;
 
-var timeInterval = NON_TURBO;
-var timer = null;
-var counter = 0;
-var textBoxForAnimate = [];
-var savedCurrentTextArea = "";
+let timeInterval = NON_TURBO;
+let timer = null;
+let counter = 0;
+let textBoxForAnimate = [];
+let savedCurrentTextArea = "";
 
 window.onload = function () {
   "use strict";
   console.log("window onload...");
-  var startButton = document.getElementById("start");
-  var stopButton = document.getElementById("stop");
-  var animationSelected = document.getElementById("animation");
-  var fontsizeSelected = document.getElementById("fontsize");
-  var isTurbo = document.getElementById("turbo");
-  var textAreaField = document.getElementById("text-area");
+  const startButton = document.getElementById("start");
+  const stopButton = document.getElementById("stop");
+  const animationSelected = document.getElementById("animation");
+  const fontsizeSelected = document.getElementById("fontsize");
+  const isTurbo = document.getElementById("turbo");
+  const textAreaField = document.getElementById("text-area");
 
   stopButton.onclick = () =>
     stopAnimation(startButton, stopButton, textAreaField, animationSelected);
@@ -128,7 +128,7 @@ function setIsTurbo(isTurbo, textAreaField) {
   if (isTurbo.checked) timeInterval = TURBO;
   else timeInterval = NON_TURBO;
 
-  if (null !== timer) {
+  if (timer !== null) {
     clearTimer();
     timer = setInterval(() => initiateAnimation(textAreaField), timeInterval);
   }

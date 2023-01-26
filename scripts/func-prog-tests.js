@@ -1,4 +1,7 @@
-/*function sum() tests */
+/* global
+  sum, multiply, reverse, filterLongWords
+ */
+/* function sum() tests */
 describe("Function sum() Test1", function () {
   it("Expected output of sum([1,2,3,4]) is 10  ", function () {
     assert.equal(sum([1, 2, 3, 4]), 10);
@@ -25,7 +28,7 @@ describe("Function sum() Test5", function () {
   });
 });
 
-/*function multiply() tests*/
+/* function multiply() tests */
 describe("Function multiplyul() Test1", function () {
   it("Expected output of multiply([1,2,3,4]) is 24  ", function () {
     assert.equal(multiply([1, 2, 3, 4]), 24);
@@ -47,7 +50,7 @@ describe("Function multiply() Test4", function () {
   });
 });
 
-/*function reverse() tests*/
+/* function reverse() tests */
 describe("Function reverse() Test1", function () {
   it("Expected output of reverse('jag testar') is ratset gaj ", function () {
     assert.equal(reverse("jag testar"), "ratset gaj");
@@ -79,11 +82,11 @@ describe("Function reverse() Test7", function () {
   });
 });
 
-/*function filterLongWords() tests*/
+/* function filterLongWords() tests */
 
-/*function test tool that returns if Array values are equal or not */
+/* function test tool that returns if Array values are equal or not */
 function areArrayValuesEqual(arr1, arr2) {
-  if (arr1.length != arr2.length) return false;
+  if (arr1.length !== arr2.length) return false;
   for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) return false;
   }
