@@ -83,45 +83,22 @@ describe("Function reverse() Test7", function () {
 });
 
 /* function filterLongWords() tests */
-
-/* function test tool that returns if Array values are equal or not */
-function areArrayValuesEqual(arr1, arr2) {
-  if (arr1.length !== arr2.length) return false;
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) return false;
-  }
-
-  return true;
-}
-
 describe("Function filterLongWords() Test1", function () {
   it("Expected output of filterLongWords(4, ['One', 'Two', 'Three', 'Snakey', 'Snake']) is ['Three', 'Snakey', 'Snake'] ", function () {
-    assert.equal(
-      areArrayValuesEqual(
-        ["Three", "Snakey", "Snake"],
-        filterLongWords(4, ["One", "Two", "Three", "Snakey", "Snake"])
-      ),
-      true
+    assert.deepEqual(
+      filterLongWords(4, ["One", "Two", "Three", "Snakey", "Snake"]),
+      ["Three", "Snakey", "Snake"]
     );
   });
 });
 describe("Function filterLongWords() Test2", function () {
   it("Expected output of filterLongWords(2, [1, 3, 'Six']) is ['Six'] ", function () {
-    assert.equal(
-      areArrayValuesEqual(["Six"], filterLongWords(2, [1, 3, "Six"])),
-      true
-    );
+    assert.deepEqual(filterLongWords(2, [1, 3, "Six"]), ["Six"]);
   });
 });
 describe("Function filterLongWords() Test3", function () {
   it("Expected output of filterLongWords(3, ['One', undefined, null, ' ', '']) is [] ", function () {
-    assert.equal(
-      areArrayValuesEqual(
-        [],
-        filterLongWords(3, ["One", undefined, null, " ", ""])
-      ),
-      true
-    );
+    assert.deepEqual(filterLongWords(3, ["One", undefined, null, " ", ""]), []);
   });
 });
 describe("Function filterLongWords() Test4", function () {
