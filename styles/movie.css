@@ -147,7 +147,6 @@ body {
 
 .review-content > div {
   width: 46%;
-  flex: 0 1 auto;
 }
 
 .critics-container {
@@ -155,6 +154,7 @@ body {
   border-radius: 10px;
   padding: 8px;
   background-color: #e8dc9b;
+  min-height: 27%;
 }
 
 .critics-name {
