@@ -17,11 +17,13 @@ Array.prototype.bubbleSort = function () {
 const Person = function () {};
 
 Person.prototype.initialize = function (name, age) {
+  "use strict";
   this.name = name;
   this.age = age;
 };
 
 Person.prototype.describe = function () {
+  "use strict";
   return this.name + ", " + this.age + " years old.";
 };
 
@@ -29,6 +31,7 @@ const Student = function () {};
 Student.prototype = new Person();
 
 Student.prototype.learn = function (subject) {
+  "use strict";
   console.log(this.name + " just learned " + subject);
 };
 
@@ -41,6 +44,7 @@ const Teacher = function () {};
 Teacher.prototype = new Person();
 
 Teacher.prototype.teach = function (subject) {
+  "use strict";
   console.log(this.name + " is now teaching " + subject);
 };
 
