@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Accounts</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <link href="../styles/unit-tests.css" type="text/css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // initialize mocha
+        mocha.setup('bdd');
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+    <script src="../scripts/models/account.js"></script>
+    <script src="../scripts/models/checkingaccount.js"></script>
+    <script src="../scripts/models/savingsaccount.js"></script>
+    <script src="../scripts/models/bank.js"></script>
+    <script src="../scripts/tests/classes-tests.js"></script>
+</head>
+
+<body>
+    <div class="my-nav">
+        <a href="../index.html">Back to Main</a>
+    </div>
+    <div id="mocha"></div>
+    <script>
+        mocha.run();
+    </script>
+
+    <div id="validate">
+        <a href="http://mumstudents.org/jshint/check.php?uri=https://jekeytimoy29.github.io/pages/classes-tests.html"
+            target="_blank">
+            <div class="js-check">
+                <img src="https://mumstudents.org/jscheck/jscheck-small.png" alt="JavaScript Lint">
+            </div>
+        </a>
+    </div>
+
+</body>
+
+</html>
