@@ -1,3 +1,5 @@
+"use strict";
+
 describe("Native Prototype Object.filter() tests", function () {
   it("Tests the Object.filter() which  accepts an array of strings that specifies a list of banned words. The function returns the string after removing all the banned words.", function () {
     assert.equal(

@@ -18,13 +18,26 @@ class Bank {
   }
 
   /**
+   * Returns the specific type of Bank Account
+   *
+   * @param {number} account number
+   * @returns {account} object
+   */
+  getAccount(number) {
+    if (this._accounts.findIndex((a) => a.getNumber() === number) === -1)
+      throw new Error("Account number does not exist.");
+
+    return this._accounts.find((a) => a.getNumber() === number);
+  }
+
+  /**
    * Method to add an account into the bank
    *
    * @returns {number} account number
    */
   addAccount() {
-    this._accounts.add(new Account(this.nextNumber));
-    return this.nextNumber++;
+    this._accounts.push(new Account(Bank.nextNumber));
+    return Bank.nextNumber++;
   }
 
   /**
@@ -34,8 +47,8 @@ class Bank {
    * @returns {number} account number
    */
   addSavingsAccount(interest) {
-    this._accounts.add(new SavingsAccount(this.nextNumber, interest));
-    return this.nextNumber++;
+    this._accounts.push(new SavingsAccount(Bank.nextNumber, interest));
+    return Bank.nextNumber++;
   }
 
   /**
@@ -45,8 +58,8 @@ class Bank {
    * @returns {number} account number
    */
   addCheckingAccount(overdraft) {
-    this._accounts.add(new CheckingAccount(this.nextNumber, overdraft));
-    return this.nextNumber++;
+    this._accounts.push(new CheckingAccount(Bank.nextNumber, overdraft));
+    return Bank.nextNumber++;
   }
 
   /**
@@ -57,7 +70,7 @@ class Bank {
    * @throws {Error} when entered account number does not exist
    */
   closeAccount(number) {
-    if (this._accounts.findIndex((a) => a.getNumber === number) === -1)
+    if (this._accounts.findIndex((a) => a.getNumber() === number) === -1)
       throw new Error("Account number does not exist.");
 
     this._accounts = this._accounts.filter((a) => a.getNumber() !== number);

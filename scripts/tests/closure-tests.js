@@ -1,6 +1,9 @@
 /* global
   Employee, FieldEmployee, incrementAndResetNumber, addWithNumber
 */
+
+"use strict";
+
 describe("Function closure incrementAndResetNumber() tests", function () {
   it("Tests the incrementAndResetNumber which returns an object that it can increment and reset a number.", function () {
     const count = incrementAndResetNumber();

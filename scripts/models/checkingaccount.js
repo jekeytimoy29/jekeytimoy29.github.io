@@ -62,7 +62,7 @@ class CheckingAccount extends Account {
       this.getNumber() +
       ": balance: " +
       this.getBalance() +
-      " overdraft limit " +
+      " overdraft limit: " +
       this._overdraft
     );
   }
@@ -74,7 +74,7 @@ class CheckingAccount extends Account {
    */
   endOfMonth() {
     let output = "";
-    if (this.getBalance < 0) output = "Warning, low balance ";
+    if (this.getBalance() < 0) output = "Warning, low balance ";
 
     return output + this.toString();
   }

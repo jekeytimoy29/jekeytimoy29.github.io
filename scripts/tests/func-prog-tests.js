@@ -2,6 +2,9 @@
   sum, multiply, reverse, filterLongWords
  */
 /* function sum() tests */
+
+"use strict";
+
 describe("Function sum() Test1", function () {
   it("Expected output of sum([1,2,3,4]) is 10  ", function () {
     assert.equal(sum([1, 2, 3, 4]), 10);
