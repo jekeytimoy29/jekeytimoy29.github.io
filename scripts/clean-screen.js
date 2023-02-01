@@ -1,15 +1,17 @@
-"use-strict";
-
 let timer = null;
 
 $(mainFunction);
 
 function mainFunction() {
+  "use-strict";
+
   timer = setInterval(growCircle, parseInt($("#intervalInput").val()));
   $("#startButton").click(executeStart);
 }
 
 function growCircle() {
+  "use-strict";
+
   setCircleDiameter(
     $(".circle").height() + parseInt($("#growthInput").val()),
     $(".circle").width() + parseInt($("#growthInput").val())
@@ -17,6 +19,8 @@ function growCircle() {
 }
 
 function executeStart() {
+  "use-strict";
+
   const numberOfCircles = parseInt($("#numOfCirclesInput").val());
   appendNewCircles(numberOfCircles);
 
@@ -29,6 +33,8 @@ function executeStart() {
 }
 
 function appendNewCircles(number) {
+  "use-strict";
+
   $("#content").empty();
   for (let i = 0; i < number; i++) {
     const newElement = $("<span>", { class: "circle" }).click(function () {
@@ -50,6 +56,8 @@ function appendNewCircles(number) {
 }
 
 function getRandomColor() {
+  "use-strict";
+
   const randomColor = [
     "#8d5524",
     "#003333",
@@ -68,18 +76,26 @@ function getRandomColor() {
 }
 
 function getRandomHeight(height) {
+  "use-strict";
+
   return getRandom(screen.availHeight - height);
 }
 
 function getRandomWidth(width) {
+  "use-strict";
+
   return getRandom(screen.availWidth - width);
 }
 
 function getRandom(number) {
+  "use-strict";
+
   return Math.random() * number;
 }
 
 function setCircleDiameter(height, width) {
+  "use-strict";
+
   $(".circle")
     .height(height)
     .width(width)
@@ -90,6 +106,8 @@ function setCircleDiameter(height, width) {
 }
 
 function resetTimer() {
+  "use-strict";
+
   clearInterval(timer);
   timer = null;
   timer = setInterval(growCircle, parseInt($("#intervalInput").val()));

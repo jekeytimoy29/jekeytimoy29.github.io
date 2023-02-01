@@ -1,10 +1,10 @@
-"use-strict";
-
 let playOn = false;
 
 $(mainFunction);
 
 function mainFunction() {
+  "use-strict";
+
   $(".boundary").mouseover(() => {
     if (playOn) {
       $(".boundary").addClass("youlose");
