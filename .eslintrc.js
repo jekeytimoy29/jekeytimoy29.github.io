@@ -4,6 +4,7 @@ module.exports = {
     commonjs: true,
     es2021: true,
     mocha: true,
+    jquery: true,
   },
   extends: ["standard", "plugin:prettier/recommended"],
   overrides: [],
