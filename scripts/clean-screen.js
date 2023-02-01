@@ -31,8 +31,8 @@ function executeStart() {
 function appendNewCircles(number) {
   $("#content").empty();
   for (let i = 0; i < number; i++) {
-    const newElement = $("<span>", {
-      class: "circle",
+    const newElement = $("<span>", { class: "circle" }).click(function () {
+      this.remove();
     });
 
     if (i === 0) newElement.css("z-index", "5");
