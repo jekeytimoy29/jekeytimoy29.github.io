@@ -5,13 +5,9 @@ $(mainFunction);
 function mainFunction() {
   "use-strict";
 
-  $(".boundary").mouseover(() => {
-    if (playOn) {
-      $(".boundary").addClass("youlose");
-      $("#status").text("You Lose! :(");
-      playOn = false;
-    }
-  });
+  $(".boundary").mouseover(losesGame);
+
+  $("#maze").mouseleave(losesGame);
 
   $("#start").click(() => (playOn = true));
 
@@ -22,18 +18,20 @@ function mainFunction() {
     }
   });
 
-  $("#maze").mouseleave((e) => {
-    if (playOn) {
-      $(".boundary").addClass("youlose");
-      $("#status").text("You Lose! :(");
-      playOn = false;
-    }
-  });
-
   $("#maze")
     .parent()
     .click(() => {
       $("#status").text('Click the "S" to begin.');
       $(".boundary").removeClass("youlose");
     });
+}
+
+function losesGame() {
+  "use-strict";
+
+  if (playOn) {
+    $(".boundary").addClass("youlose");
+    $("#status").text("You Lose! :(");
+    playOn = false;
+  }
 }
